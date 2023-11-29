@@ -1,3 +1,5 @@
+Rosé
+
 ### Views.py
 
 		def index(request):
@@ -92,3 +94,13 @@
 		                order_dictionary = {'id':order.id, 'rent':order.rent, 'car':order.car, 'days':order.days, 'car_dealer':order.car_dealer}
 		                all_orders.append(order_dictionary)
 		    return render(request, "past_orders.html", {'all_orders':all_orders})
+
+### kodingan Maps
+(taroh dibawah kodingan alarm di mainactivityhome)
+
+    public void showMap(View view) {
+        String uri = "http://maps.google.com/";
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri));
+        intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+        startActivity(intent);
+    }
